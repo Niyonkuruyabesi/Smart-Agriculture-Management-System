@@ -4,7 +4,7 @@
 **Student:** NIYONKURU NYIRIMPETA Yabesi  
 **Student ID:** 27715  
 **Database:** Oracle 21c  
-
+**PDB Name:** tues_27715_yabesi_smartAgriDB
 ---
 
 ## Objective
@@ -84,3 +84,4 @@ ALTER DATABASE ARCHIVELOG;
 GRANT CONNECT, RESOURCE, DBA TO admin_yabesi;
 
 ```
+
