@@ -3,7 +3,7 @@
 **Project:** IoT-Based Smart Agriculture Management System  
 **Student:** NIYONKURU NYIRIMPETA Yabesi  
 **Student ID:** 27715  
-**Database:** Oracle 21c XE  
+**Database:** Oracle 21c  
 
 ---
 
@@ -28,7 +28,7 @@ FILE_NAME_CONVERT = (
   'C:\app\niyon\product\21c\oradata\XE\tues_27715_yabesi_smartAgriDB'
 );
 ```
-
+![Smart Farm IoT BPMN Diagram](Screenshots/create_pdb.png)
 ## Step 2: Connect to the New Pluggable Database
 
 ```sql
@@ -48,7 +48,7 @@ SIZE 100M
 AUTOEXTEND ON NEXT 10M
 MAXSIZE UNLIMITED;
 ```
-
+![Smart Farm IoT BPMN Diagram](Screenshots/data_tablespace.png)
 
 
 ## 3.2 Index Tablespace
@@ -60,7 +60,7 @@ AUTOEXTEND ON NEXT 5M
 MAXSIZE UNLIMITED;
 ```
 
-
+![Smart Farm IoT BPMN Diagram](Screenshots/index_tablespace.png)
 
 ## 3.3 Temporary Tablespace
 ```sql
@@ -70,7 +70,7 @@ SIZE 50M
 AUTOEXTEND ON NEXT 5M
 MAXSIZE UNLIMITED;
 ```
-
+![Smart Farm IoT BPMN Diagram](Screenshots/temporary_tablespace.png)
 
 
 ## Step 4: Enable Archive Logging
@@ -82,4 +82,5 @@ ALTER DATABASE ARCHIVELOG;
 ## Step 5: Grant User Privileges
 ```sql
 GRANT CONNECT, RESOURCE, DBA TO admin_yabesi;
+
 ```
