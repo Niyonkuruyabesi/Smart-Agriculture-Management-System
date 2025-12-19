@@ -7,7 +7,7 @@
 
 The following BPMN swimlane diagram illustrates the Smart Farm Management process, showing clear responsibilities, decision points, and data flow among the Farm Manager, IoT System, and Farm Employee.
 
-![Smart Farm IoT BPMN Diagram](diagrams/bpmn_smart_farm_iot.png)
+![Smart Farm IoT BPMN Diagram](Screenshots/BPMN.png)
 
 ---
 
@@ -133,3 +133,4 @@ The system enables:
 
 ## Conclusion
 The Smart Farm IoT BPMN model demonstrates effective integration of automation, data management, and human decision-making within an MIS framework. The swimlane-based BPMN diagram clearly shows responsibilities, decision points, and data flow, making it suitable for enterprise-level MIS implementation and analytics-driven management.
+
