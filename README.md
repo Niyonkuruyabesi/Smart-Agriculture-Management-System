@@ -26,8 +26,7 @@ The **Smart Agriculture Management System** leverages IoT concepts and PL/SQL-ba
 ---
 
 ## System Architecture
-![System Architecture](path/to/system_architecture.png)
-*Replace this with your system architecture diagram.*
+
 
 **Layers:**
 1. **IoT Sensors Layer:** Soil moisture, temperature, humidity, pest sensors, livestock wearables.  
@@ -38,7 +37,7 @@ The **Smart Agriculture Management System** leverages IoT concepts and PL/SQL-ba
 ---
 
 ## Business Process Modeling (BPMN)
-![BPMN Diagram](path/to/bpmn_diagram.png)
+![BPMN Diagram](Screenshots/BPMN.png)
 *Replace this with your BPMN diagram.*
 
 **Scenario:**  
@@ -61,10 +60,16 @@ The **Smart Agriculture Management System** leverages IoT concepts and PL/SQL-ba
 - **GREENHOUSE_CONTROL:** Greenhouse environmental control.  
 
 ### ER Diagram
-![ER Diagram](path/to/er_diagram.png)
+![ER Diagram](Screenshots/ERD.png)
 *Replace this with your ERD diagram.*
 
 **Normalization:** All tables are designed in **3NF** to ensure data integrity, minimize redundancy, and optimize storage.
+
+---
+## Oracle Enterprise Manager
+
+![System Architecture](Screenshots/OEM.png)
+*Replace this with your system architecture diagram.*
 
 ---
 
@@ -132,7 +137,4 @@ The **Smart Agriculture Management System** leverages IoT concepts and PL/SQL-ba
 
 ---
 
-## How to Run
-1. **Clone the Repository:**  
-```bash
-git clone https://github.com/yourusername/smart-agriculture.git
+
