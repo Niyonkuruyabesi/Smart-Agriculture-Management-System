@@ -21,20 +21,12 @@ The **Smart Agriculture Management System** leverages IoT concepts and PL/SQL-ba
 - **Pest Detection:** Early detection using sensor data to prevent crop damage.  
 - **Greenhouse Automation:** Controls temperature, humidity, and lighting.  
 - **Data Analytics Ready:** Aggregations, window functions, and structured schema for BI integration.  
-- **Audit & Restrictions:** User activity tracking, weekday & holiday restrictions enforced via triggers.  
+- **Audit & Restrictions:** User activity tracking, weekday & holiday restrictions enforced via triggers.
+- 
 
 ---
 
-## System Architecture
 
-
-**Layers:**
-1. **IoT Sensors Layer:** Soil moisture, temperature, humidity, pest sensors, livestock wearables.  
-2. **Database Layer:** Oracle Database storing sensor readings, farm, livestock, and greenhouse data.  
-3. **PL/SQL Logic Layer:** Procedures, functions, packages, triggers for automation and validation.  
-4. **User Layer:** Farmers and managers access reports and monitor farm operations.
-
----
 
 ## Business Process Modeling (BPMN)
 ![BPMN Diagram](Screenshots/BPMN.png)
@@ -70,6 +62,16 @@ The **Smart Agriculture Management System** leverages IoT concepts and PL/SQL-ba
 
 ![System Architecture](Screenshots/OEM.png)
 
+
+---
+## System Architecture
+![System Architecture](Screenshots/system_archtecture.png)
+
+**Layers:**
+1. **IoT Sensors Layer:** Soil moisture, temperature, humidity, pest sensors, livestock wearables.  
+2. **Database Layer:** Oracle Database storing sensor readings, farm, livestock, and greenhouse data.  
+3. **PL/SQL Logic Layer:** Procedures, functions, packages, triggers for automation and validation.  
+4. **User Layer:** Farmers and managers access reports and monitor farm operations.
 
 ---
 
