@@ -38,7 +38,7 @@ The **Smart Agriculture Management System** leverages IoT concepts and PL/SQL-ba
 
 ## Business Process Modeling (BPMN)
 ![BPMN Diagram](Screenshots/BPMN.png)
-*Replace this with your BPMN diagram.*
+
 
 **Scenario:**  
 - A farmer places an order or initiates a monitoring check.  
@@ -61,7 +61,7 @@ The **Smart Agriculture Management System** leverages IoT concepts and PL/SQL-ba
 
 ### ER Diagram
 ![ER Diagram](Screenshots/ERD.png)
-*Replace this with your ERD diagram.*
+
 
 **Normalization:** All tables are designed in **3NF** to ensure data integrity, minimize redundancy, and optimize storage.
 
@@ -69,7 +69,7 @@ The **Smart Agriculture Management System** leverages IoT concepts and PL/SQL-ba
 ## Oracle Enterprise Manager
 
 ![System Architecture](Screenshots/OEM.png)
-*Replace this with your system architecture diagram.*
+
 
 ---
 
@@ -129,12 +129,6 @@ The **Smart Agriculture Management System** leverages IoT concepts and PL/SQL-ba
 
 ---
 
-## Project Screenshots / Visuals
-- System Architecture: `![System Architecture](path/to/image)`  
-- BPMN Process Flow: `![BPMN Diagram](path/to/image)`  
-- ER Diagram: `![ER Diagram](path/to/image)`  
-- Sample Data Tables / Reports: `![Data Table](path/to/image)`  
 
----
 
 
