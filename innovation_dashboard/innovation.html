@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smart Agriculture Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f9;
+}
+
+/* LOGIN */
+#loginBox {
+    width: 350px;
+    margin: 120px auto;
+    background: white;
+    padding: 25px;
+    box-shadow: 0 0 10px #aaa;
+    border-radius: 6px;
+}
+#loginBox h2 {
+    text-align: center;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background: #2e8b57;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background: #256d45;
+}
+
+/* DASHBOARD */
+#dashboard {
+    display: none;
+}
+
+header {
+    background: #2e8b57;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    background: #333;
+}
+nav button {
+    flex: 1;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 12px;
+}
+nav button:hover {
+    background: #555;
+}
+
+.tab {
+    display: none;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="loginBox">
+    <h2>Smart Agriculture Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="loginMsg" style="color:red;text-align:center;"></p>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard">
+<header>
+    <h1>Smart Agriculture MIS Dashboard</h1>
+</header>
+
+<nav>
+    <button onclick="openTab('overview')">Overview</button>
+    <button onclick="openTab('sensors')">Sensors</button>
+    <button onclick="openTab('irrigation')">Irrigation</button>
+    <button onclick="openTab('livestock')">Livestock</button>
+    <button onclick="openTab('reports')">Reports</button>
+</nav>
+
+<!-- OVERVIEW -->
+<div id="overview" class="tab">
+    <div class="card">
+        <h3>Farm Summary</h3>
+        <p>Total Farms: 120</p>
+        <p>Active Sensors: 95</p>
+        <p>Livestock Units: 300</p>
+    </div>
+
+    <canvas id="overviewChart"></canvas>
+</div>
+
+<!-- SENSORS -->
+<div id="sensors" class="tab">
+    <div class="card">
+        <h3>Sensor Readings</h3>
+        <ul id="sensorList">
+            <li>Moisture: 45%</li>
+            <li>Temperature: 26°C</li>
+            <li>Humidity: 65%</li>
+        </ul>
+        <button onclick="addSensor()">Add Random Reading</button>
+    </div>
+
+    <canvas id="sensorChart"></canvas>
+</div>
+
+<!-- IRRIGATION -->
+<div id="irrigation" class="tab">
+    <div class="card">
+        <h3>Irrigation Control</h3>
+        <p>Status: <span id="irrigationStatus">OFF</span></p>
+        <button onclick="toggleIrrigation()">Toggle Irrigation</button>
+    </div>
+</div>
+
+<!-- LIVESTOCK -->
+<div id="livestock" class="tab">
+    <div class="card">
+        <h3>Livestock Monitoring</h3>
+        <table border="1" width="100%">
+            <tr><th>Animal</th><th>Temperature</th><th>Status</th></tr>
+            <tr><td>Cow</td><td>38.5</td><td>Healthy</td></tr>
+            <tr><td>Goat</td><td>39.2</td><td>Sick</td></tr>
+        </table>
+    </div>
+</div>
+
+<!-- REPORTS -->
+<div id="reports" class="tab">
+    <div class="card">
+        <h3>Reports & Analytics</h3>
+        <p>• Average moisture per farm</p>
+        <p>• Irrigation efficiency</p>
+        <p>• Livestock health trends</p>
+    </div>
+</div>
+
+</div>
+
+<script>
+/* LOGIN */
+function login() {
+    let u = username.value;
+    let p = password.value;
+    if (u === "admin" && p === "admin") {
+        loginBox.style.display = "none";
+        dashboard.style.display = "block";
+        openTab("overview");
+        loadCharts();
+    } else {
+        loginMsg.innerText = "Invalid login (try admin/admin)";
+    }
+}
+
+/* TABS */
+function openTab(tabId) {
+    document.querySelectorAll(".tab").forEach(t => t.style.display = "none");
+    document.getElementById(tabId).style.display = "block";
+}
+
+/* IRRIGATION */
+function toggleIrrigation() {
+    let status = document.getElementById("irrigationStatus");
+    status.innerText = (status.innerText === "OFF") ? "ON" : "OFF";
+}
+
+/* SENSOR */
+function addSensor() {
+    let value = Math.floor(Math.random() * 100);
+    let li = document.createElement("li");
+    li.innerText = "Moisture: " + value + "%";
+    document.getElementById("sensorList").appendChild(li);
+}
+
+/* CHARTS */
+function loadCharts() {
+    new Chart(document.getElementById("overviewChart"), {
+        type: 'bar',
+        data: {
+            labels: ['Crops', 'Livestock', 'Greenhouses'],
+            datasets: [{
+                label: 'Count',
+                data: [50, 40, 30],
+                backgroundColor: ['green','brown','blue']
+            }]
+        }
+    });
+
+    new Chart(document.getElementById("sensorChart"), {
+        type: 'line',
+        data: {
+            labels: ['Day1','Day2','Day3','Day4'],
+            datasets: [{
+                label: 'Moisture %',
+                data: [45, 50, 55, 48],
+                borderColor: 'green'
+            }]
+        }
+    });
+}
+</script>
+
+</body>
+</html>
